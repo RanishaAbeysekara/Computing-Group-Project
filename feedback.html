@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Of Computing</title>
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo"><a href="#">Faculty Of Computing</a></h2>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <ul class="links">
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/index.html">Home</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/index.html">Lecture Halls</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/wash.html">Washrooms</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/book.html">Book Halls</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/feedback.html">Feedback</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+      <div class="feedback-form">
+        <h2>Feedback</h2>
+        <form id="feedback-form" action="submit_feedback.php" method="POST">
+            <label for="student-id">Name :</label>
+            <input type="text" id="student-id" name="student_id" required><br><br>
+            
+            <label for="feedback">Feedback :</label>
+            <textarea id="feedback" name="feedback" required></textarea><br><br>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+      </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Lecture Hall Navigation System. All rights reserved. <br>
+        "Lecture Hall Navigation System - Empowering efficient movement within educational spaces."
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

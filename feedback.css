@@ -1,0 +1,220 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url(/Users/nisayurusandaneth/Downloads/Lec/1.png);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.header {
+    background-color: #01230e;
+opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+    color: #63ff97;
+  }
+  
+
+
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  .header .buttons {
+    display: none;
+  }
+
+
+}
+
+
+
+  
+
+
+
+.footer {
+    position: fixed; /* Position the footer relative to the viewport */
+    bottom: 0; /* Align the footer to the bottom */
+    width: 100%; /* Ensure the footer spans the entire width */
+    background-color: #01230e;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0.8;
+}
+
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  .feedback-form {
+    max-width: 400px;
+    margin-top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Embossed effect with box-shadow */
+  }
+  
+  .feedback-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 18px;
+  }
+  .feedback-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Adjust the height of the textarea */
+    height: 90px;
+    width: 300px; /* You can change this value as needed */
+}
+
+  
+  .feedback-form input[type="text"],
+  .feedback-form input[type="number"],
+  .feedback-form select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .feedback-form input[type="text"]:focus,
+  .feedback-form input[type="number"]:focus,
+  .feedback-form select:focus {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form select {
+    appearance: none;
+  }
+  
+  .feedback-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #03540c;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #003406;
+  }
+  
