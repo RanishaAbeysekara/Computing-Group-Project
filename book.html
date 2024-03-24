@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Of Computing</title>
+  <link rel="stylesheet" href="book.css" />
+  <style>
+    /* CSS for the popup message */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      display: none;
+      text-align: center;
+      max-width: 300px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+  
+    .popup h3 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ff6347; /* Tomato red color */
+    }
+  
+    .popup p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  
+    .popup button {
+      background-color: #ff6347;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .popup button:hover {
+      background-color: #cc4d35; /* Darker shade of tomato red */
+    }
+  </style>
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo"><a href="#">Faculty Of Computing</a></h2>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <ul class="links">
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/index.html">Home</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/index.html">Lecture Halls</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/wash.html">Washrooms</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/book.html">Book Halls</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/feedback.html">Feedback</a></li>
+        <li><a href="/Users/nisayurusandaneth/Downloads/Lec/aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="booking-form">
+
+    <form id="booking-form" form action="https://formsubmit.co/nisayurusandaneth@email.com" method="POST">
+      <h2>Book a Lecture Hall</h2>
+
+      <label for="student-id">Student ID:</label>
+      <input type="text" id="student-id" name="student_id" required><br><br>
+
+      <label for="student-id">Student Email:</label>
+      <input type="text" id="student-mail" name="student_mail" required><br><br>
+
+      
+      
+      <label for="lecture-hall">Lecture Hall Number:</label>
+      <select id="lecture-hall" name="lecture_hall_number" required>
+        <option value="1">C2 009</option>
+        <option value="2">C2 002</option>
+        <option value="3">C2 003</option>
+        <option value="1">C2 007</option>
+        <option value="2">C2 008</option>
+        <option value="3">C2 006</option>
+        <option value="3">C2 005</option>
+        <option value="3">C2 L102</option>
+        <option value="1">C2 L105</option>
+        <option value="2">C2 L107</option>
+        <option value="3">C2 L106</option>
+        <option value="3">C2 L104</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="start_date">Date:</label>
+      <input type="date" id="start_date" name="start_date" required><br><br>
+      
+      <label for="start_hours">Start Time - Hours:</label>
+      <input type="number" id="start_hours" name="start_hours" min="0" max="23" step="1" required>
+      <label for="start_minutes">Start Time - Minutes:</label>
+      <input type="number" id="start_minutes" name="start_minutes" min="0" max="59" step="1" required><br><br>
+      
+      <label for="end_hours">End Time - Hours:</label>
+      <input type="number" id="end_hours" name="end_hours" min="0" max="23" step="1" required>
+      <label for="end_minutes">End Time - Minutes:</label>
+      <input type="number" id="end_minutes" name="end_minutes" min="0" max="59" step="1" required>
+      
+      
+      <button type="submit">Book</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Lecture Hall Navigation System. All rights reserved. <br>
+        "Lecture Hall Navigation System - Empowering efficient movement within educational spaces."
+      </p>
+    </div>
+  </footer>
+
+  <div class="popup" id="popup">
+    Booking successful!
+  </div>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url(/Users/nisayurusandaneth/Downloads/Lec/1.png);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.header {
+    background-color: #01230e;
+opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+    color: #63ff97;
+  }
+  
+
+
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  .header .buttons {
+    display: none;
+  }
+
+
+}
+
+
+
+  
+
+
+
+.footer {
+    position: 100px; /* Position the footer relative to the viewport */
+    bottom: 10; /* Align the footer to the bottom */
+    width: 100%; /* Ensure the footer spans the entire width */
+    background-color: #01230e;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0.8;
+}
+
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  form {
+    max-width: 500px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="date"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="date"]:focus {
+    border: 1px solid #4CAF50;
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
